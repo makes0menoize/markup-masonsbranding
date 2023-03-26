@@ -1,0 +1,746 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+:root {
+  --inter: "Inter", sans-serif;
+  --mont: "Montserrat", sans-serif;
+  --roboto: "Roboto", sans-serif;
+}
+
+a {
+  font-family: var(--mont);
+}
+
+body {
+  background-color: black;
+}
+
+.masons-container {
+  max-width: 1380px;
+  padding: 0px 15px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.masons-header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 2;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+}
+.menu a {
+  font-size: 18px;
+  line-height: 21.94px;
+  font-weight: 300;
+  color: #ffffff;
+  padding: 0px 15px 15px 15px;
+  position: relative;
+}
+.menu a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: transparent;
+  transform: skewX(-25deg);
+  z-index: -1;
+}
+.menu a.active {
+  color: black;
+  font-weight: 700;
+}
+.menu a.active::after {
+  background: white;
+}
+
+.masons-banner {
+  background: url(/img/Frame\ 174.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 1000px;
+}
+.masons-banner__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  padding-top: 300px;
+}
+.masons-banner h1 {
+  font-size: 82px;
+  line-height: 77.9px;
+  font-weight: 800;
+  font-family: var(--mont);
+  color: white;
+}
+.masons-banner span {
+  color: #ffc700;
+}
+.masons-banner p {
+  font-size: 24px;
+  color: #a8a8a8;
+  font-weight: 400;
+  font-family: var(--mont);
+  line-height: 29.26px;
+}
+.masons-banner .catalog {
+  padding: 30px 100px;
+  background-color: #ffc700;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 800;
+  font-family: var(--mont);
+  border-radius: 5px;
+}
+
+.masons-services__inner {
+  margin-top: 240px;
+  text-align: center;
+}
+.masons-services h2 {
+  font-size: 72px;
+  line-height: 87.77px;
+  font-weight: 700;
+  font-family: var(--mont);
+  color: #f0f0f0;
+}
+.masons-services span {
+  color: #ffc700;
+}
+.masons-services .p-l {
+  color: #949494;
+  font-size: 32px;
+  line-height: 39.01px;
+  font-weight: 300;
+  font-family: var(--mont);
+}
+.masons-services h3 {
+  font-size: 24px;
+  line-height: 29.26px;
+  font-weight: 700;
+  color: #f0f0f0;
+  font-family: var(--mont);
+}
+.masons-services p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19.5px;
+  font-family: var(--mont);
+  color: #f0f0f0;
+}
+.masons-services .more {
+  padding: 15px 25px;
+  color: #ffc700;
+  font-size: 16px;
+  line-height: 19.5px;
+  font-weight: 500;
+  background-color: #171717;
+}
+.masons-services .items-services {
+  display: flex;
+  margin-top: 116px;
+  flex-wrap: wrap;
+}
+.masons-services .item {
+  position: relative;
+  width: 33.33%;
+  padding-bottom: 166px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
+.masons-services .background-img {
+  position: absolute;
+  top: -50px;
+  left: 60px;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.masons-example__inner {
+  text-align: start;
+}
+.masons-example .swiper-wrapper {
+  display: flex;
+}
+.masons-example h4 {
+  font-size: 48px;
+  line-height: 58.51px;
+  font-weight: 600;
+  font-family: var(--mont);
+  color: #ffc700;
+}
+.masons-example span {
+  color: white;
+}
+.masons-example p {
+  font-size: 32px;
+  line-height: 39.01px;
+  font-weight: 300;
+  color: #b8b8b8;
+}
+.masons-example .swiper-button-next {
+  color: white;
+}
+.masons-example .swiper-button-prev {
+  color: white;
+}
+.masons-example .swiper-pagination {
+  display: none;
+}
+
+.masons-promotion {
+  margin-top: 160px;
+}
+.masons-promotion__inner h4 {
+  font-size: 48px;
+  line-height: 58.51px;
+  font-weight: 600;
+  font-family: var(--mont);
+  color: #ffc700;
+}
+.masons-promotion__inner p {
+  font-size: 32px;
+  line-height: 39.01px;
+  font-weight: 300;
+  color: #b8b8b8;
+}
+.masons-promotion__flex-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 43vw;
+}
+.masons-promotion .swiper-slide {
+  position: relative;
+}
+.masons-promotion .swiper-slide::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: url(/img/Rectangle\ 76.svg) center/100% 100% no-repeat;
+  z-index: -1;
+}
+
+.masons-promotion-description {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: flex-start;
+}
+.masons-promotion-description h5 {
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 63.39px;
+  font-family: var(--mont);
+  color: #252525;
+}
+.masons-promotion-description p {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29.26px;
+  color: #262626;
+}
+.masons-promotion-description .promotion-more {
+  padding: 20px 30px;
+  color: white;
+  background-color: #0f0f0f;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 20px;
+  font-family: var(--mont);
+}
+
+.swiper {
+  position: relative;
+}
+.swiper .swiper-button-next {
+  position: absolute;
+}
+
+.masons-top-sales__inner {
+  margin-top: 220px;
+  text-align: center;
+}
+.masons-top-sales__inner h3 {
+  font-size: 72px;
+  line-height: 87.77px;
+  font-weight: 700;
+  font-family: var(--mont);
+  color: white;
+}
+.masons-top-sales__inner h3 span {
+  color: #ffc700;
+}
+.masons-top-sales__inner p {
+  font-size: 32px;
+  line-height: 39.01px;
+  font-weight: 300;
+  font-family: var(--mont);
+  color: #949494;
+}
+.masons-top-sales__inner a {
+  padding: 10px 20px;
+  color: white;
+  line-height: 29.26px;
+  font-size: 24px;
+  font-weight: 400;
+}
+.masons-top-sales__inner a.active {
+  background-color: #ffc700;
+  color: #0f0f0f;
+  border-radius: 5px;
+}
+.masons-top-sales__inner .price p {
+  font-size: 20px;
+  line-height: 24.38px;
+  font-weight: 300;
+  font-family: var(--mont);
+  color: white;
+}
+.masons-top-sales__inner .price .price-paragraph {
+  font-size: 24px;
+  line-height: 29.26px;
+  font-weight: 700;
+  font-family: var(--mont);
+  color: #f0f0f0;
+}
+.masons-top-sales__inner .categories {
+  margin-top: 95px;
+  display: flex;
+  gap: 40px;
+}
+.masons-top-sales__inner .price {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+.masons-top-sales__inner .shirt-1 img {
+  padding-bottom: 40px;
+}
+
+.masons-catalog__inner {
+  margin-top: 220px;
+  text-align: center;
+}
+.masons-catalog__inner h3 {
+  font-size: 72px;
+  line-height: 87.77px;
+  font-weight: 700;
+  font-family: var(--mont);
+  color: white;
+}
+.masons-catalog__inner h3 span {
+  color: #ffc700;
+}
+.masons-catalog__inner p {
+  font-size: 32px;
+  line-height: 39.01px;
+  font-weight: 300;
+  font-family: var(--mont);
+  color: #949494;
+  padding-bottom: 30px;
+}
+.masons-catalog__inner h5 {
+  font-size: 32px;
+  line-height: 39.01px;
+  font-weight: 700;
+  color: white;
+}
+.masons-catalog__inner .s-p {
+  font-size: 14px;
+  line-height: 17.07px;
+  font-weight: 300;
+  color: #ffc700;
+}
+.masons-catalog__inner .masons-products {
+  margin-top: 160px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  height: 100%;
+}
+.masons-catalog__inner .cloth {
+  background-color: #101010;
+  position: relative;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.masons-feedbacks__inner {
+  text-align: center;
+  margin-top: 186px;
+}
+.masons-feedbacks__inner h3 {
+  font-size: 72px;
+  line-height: 87.77px;
+  font-weight: 700;
+  font-family: var(--mont);
+  color: white;
+}
+.masons-feedbacks__inner h3 span {
+  color: #ffc700;
+}
+.masons-feedbacks__inner p {
+  font-size: 32px;
+  line-height: 39.01px;
+  font-weight: 300;
+  font-family: var(--mont);
+  color: #949494;
+}
+.masons-feedbacks__inner .swiper-container {
+  max-width: 900px;
+  padding: 0px 15px;
+  margin: 0 auto;
+  width: 100%;
+}
+.masons-feedbacks__inner .background-slide-second {
+  background: url(/img/Rectangle\ 75.svg) center/cover no-repeat;
+  margin-top: 155px;
+}
+.masons-feedbacks__inner .swiper-button-next {
+  color: white;
+  background-color: black;
+  padding: 55px;
+  border-radius: 50%;
+  margin-right: 70px;
+}
+.masons-feedbacks__inner .swiper-button-prev {
+  color: white;
+  background-color: black;
+  padding: 55px;
+  border-radius: 50%;
+}
+
+.masons-proofs {
+  margin-top: 200px;
+}
+.masons-proofs__inner h3 {
+  font-size: 72px;
+  line-height: 87.77px;
+  font-weight: 700;
+  font-family: var(--mont);
+  color: white;
+}
+.masons-proofs__inner h3 span {
+  color: #ffc700;
+}
+.masons-proofs__inner p {
+  font-size: 32px;
+  line-height: 39.01px;
+  font-weight: 300;
+  font-family: var(--mont);
+  color: #949494;
+}
+.masons-proofs__inner .video-box {
+  display: flex;
+  justify-content: center;
+}
+.masons-proofs__inner .video {
+  width: 915px;
+  height: 514px;
+  margin-top: 40px;
+}
+
+.contact-us {
+  margin-top: 260px;
+  text-align: center;
+}
+.contact-us__inner h3 {
+  font-size: 72px;
+  line-height: 87.77px;
+  font-weight: 700;
+  font-family: var(--mont);
+  color: white;
+}
+.contact-us__inner h3 span {
+  color: #ffc700;
+}
+.contact-us__inner p {
+  font-size: 32px;
+  line-height: 39.01px;
+  font-weight: 300;
+  font-family: var(--mont);
+  color: #949494;
+  margin-bottom: 200px;
+}
+.contact-us__inner .reg-flex-box {
+  display: flex;
+  justify-content: space-around;
+}
+.contact-us__inner .forms-box {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.contact-us__inner .forms-box input {
+  font-size: 16px;
+  font-family: var(--mont);
+  font-weight: 400;
+  line-height: 19.5px;
+  color: #ffc700;
+  background-color: #111111;
+  padding-left: 41px;
+  width: 454px;
+  height: 60px;
+  transform: skewX(-20deg);
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.contact-us__inner .forms-box input::-moz-placeholder {
+  color: #ffc700;
+}
+.contact-us__inner .forms-box input::placeholder {
+  color: #ffc700;
+}
+.contact-us__inner .send-form {
+  padding: 20px 30px;
+  font-size: 20px;
+  color: #1c1c1c;
+  background-color: #ffc700;
+  font-weight: 800;
+  font-family: var(--mont);
+  box-shadow: 0 0 10px #ffc700;
+}
+.contact-us__inner .social-links {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  margin-top: 35px;
+}
+.contact-us__inner .social-links .soc-btn {
+  background-color: #ffc700;
+  border-radius: 5px;
+}
+.contact-us__inner .social-links .telegram {
+  padding: 12px 12px;
+}
+.contact-us__inner .social-links .viber {
+  padding: 10px 10px;
+}
+
+.masons-find {
+  margin-top: 213px;
+}
+.masons-find__inner .general-flex-box {
+  display: flex;
+  justify-content: space-around;
+}
+.masons-find__inner .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  text-align: center;
+  background-color: #1a1a1a;
+  min-height: 343px;
+  min-width: 283px;
+  border-radius: 25px 0px 25px 0px;
+}
+.masons-find__inner img {
+  max-height: 60px;
+  width: auto;
+}
+.masons-find__inner p {
+  font-size: 16px;
+  line-height: 19.5px;
+  font-weight: 400;
+  font-family: var(--mont);
+  color: white;
+}
+.masons-find__inner a {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 39.01px;
+  font-family: var(--mont);
+  color: white;
+}
+
+.masons-footer {
+  margin-top: 154px;
+  padding-top: 43px;
+  padding-bottom: 63px;
+  background-color: #191919;
+}
+.masons-footer h6 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29.26px;
+  font-family: var(--mont);
+  color: white;
+  padding-bottom: 10px;
+}
+.masons-footer a {
+  font-size: 16px;
+  line-height: 19.5px;
+  font-weight: 400;
+  font-family: var(--mont);
+  color: #b7b7b7;
+}
+.masons-footer h5 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29.26px;
+  font-family: var(--mont);
+  color: white;
+}
+.masons-footer p {
+  font-size: 14px;
+  line-height: 17.07px;
+  font-weight: 400;
+  color: #b7b7b7;
+}
+.masons-footer__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.masons-footer__inner .footer-soc-links {
+  display: flex;
+  gap: 30px;
+  margin-top: 14px;
+}
+.masons-footer__inner .footer-soc-links .soc-btn {
+  background-color: #ffc700;
+  border-radius: 5px;
+  padding: 5px 5px;
+}
+.masons-footer__inner .footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.masons-footer__inner .footer-form form {
+  display: inline;
+}
+.masons-footer__inner .footer-form input {
+  margin-top: 11px;
+  min-width: 190px;
+  min-height: 30px;
+  background-color: #363636;
+  padding-left: 14px;
+  color: #ffc700;
+}
+.masons-footer__inner .footer-form input::-moz-placeholder {
+  color: #ffc700;
+}
+.masons-footer__inner .footer-form input::placeholder {
+  color: #ffc700;
+}
+.masons-footer__inner .small-send {
+  background-color: #ffc700;
+  padding: 7px 15px;
+  font-size: 12px;
+  color: black;
+  line-height: 14.63px;
+  font-weight: 500;
+  font-family: var(--mont);
+}
