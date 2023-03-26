@@ -142,7 +142,7 @@ body {
 }
 
 .masons-banner {
-  background: url(/img/Frame\ 174.svg);
+  background: url(..../img/Frame\ 174.svg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -340,7 +340,7 @@ body {
       right: 0;
       top: 0;
       bottom: 0;
-      background: url(/img/Rectangle\ 76.svg) center / 100% 100% no-repeat;
+      background: url(../img/Rectangle\ 76.svg) center / 100% 100% no-repeat;
       z-index: -1;
     }
   }
@@ -549,7 +549,7 @@ body {
     }
 
     .background-slide-second {
-      background: url(/img/Rectangle\ 75.svg) center / cover no-repeat;
+      background: url(../img/Rectangle\ 75.svg) center / cover no-repeat;
       margin-top: 155px;
     }
 
