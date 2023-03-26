@@ -1,43 +1,50 @@
-$(document).ready(function(){
-    $('#menu a').click(menuItemClick);
-    $('#categories a').click(categoriesItemClick);
+$(document).ready(function () {
+  $('#menu a').click(menuItemClick);
+  $('#categories a').click(categoriesItemClick);
 
-    function menuItemClick(){
-      $('#menu a').removeClass('active');
-      $(this).addClass('active');
+  function menuItemClick() {
+    $('#menu a').removeClass('active');
+    $(this).addClass('active');
   }
-  
-  function categoriesItemClick(){
+
+  function categoriesItemClick() {
     $('#categories a').removeClass('active');
     $(this).addClass('active');
   }
 
-  new Swiper(".mySwiper", {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      loop: true,
-      navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
-  
-  new Swiper(".singleSwiper", {
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
-  
-  new Swiper(".phoneSwiper", {
+  new Swiper('.mySwiper', {
+    slidesPerView: 3,
+    spaceBetween: 30,
     loop: true,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+
+  new Swiper('.singleSwiper', {
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+  new Swiper('.phoneSwiper', {
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+  $('#burger-menu').click(function () {
+    $('#masons-header').addClass('open');
+  });
+  $('#masons-header').click(function () {
+    $(this).removeClass('open');
   });
 });

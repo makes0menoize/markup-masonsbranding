@@ -115,11 +115,52 @@ body {
   z-index: 2;
 }
 
+.burger-menu {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .burger-menu {
+    display: inline-block;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    background: none;
+    color: white;
+  }
+  .burger-menu:focus {
+    outline: none;
+    border: none;
+    color: white;
+  }
+  .masons-header {
+    bottom: 0;
+    display: none;
+  }
+  .masons-header.open {
+    display: block;
+  }
+  .masons-header .menu {
+    height: 100vh;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    gap: 20px;
+  }
+  .masons-header .menu a {
+    display: block;
+    max-height: 40px;
+    width: 60%;
+  }
+}
 .menu {
   display: flex;
   justify-content: space-around;
 }
 .menu a {
+  z-index: 1;
   font-size: 18px;
   line-height: 21.94px;
   font-weight: 300;
