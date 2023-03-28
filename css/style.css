@@ -108,7 +108,7 @@ body {
 }
 
 .masons-header {
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   top: 0;
@@ -123,15 +123,28 @@ body {
   .burger-menu {
     display: inline-block;
     position: fixed;
+    width: 30px;
+    height: 3px;
     right: 20px;
     top: 20px;
     background: none;
-    color: white;
+    background-color: white;
   }
-  .burger-menu:focus {
-    outline: none;
-    border: none;
-    color: white;
+  .burger-menu::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin-top: 6px;
+  }
+  .burger-menu::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin-top: 9px;
   }
   .masons-header {
     bottom: 0;
@@ -229,6 +242,14 @@ body {
   border-radius: 5px;
 }
 
+@media (max-width: 1024px) {
+  .masons-banner .masons-container {
+    max-width: 965px;
+    padding: 0px 15px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
 .masons-services__inner {
   margin-top: 240px;
   text-align: center;
@@ -296,6 +317,14 @@ body {
   z-index: -1;
 }
 
+@media (max-width: 1024px) {
+  .masons-services .masons-container {
+    max-width: 965px;
+    padding: 0px 15px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
 .masons-example__inner {
   text-align: start;
 }
@@ -328,6 +357,14 @@ body {
   display: none;
 }
 
+@media (max-width: 1024px) {
+  .masons-example .masons-container {
+    max-width: 965px;
+    padding: 0px 15px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
 .masons-promotion {
   margin-top: 160px;
 }
@@ -401,6 +438,14 @@ body {
   position: absolute;
 }
 
+@media (max-width: 1024px) {
+  .masons-promotion .masons-container {
+    max-width: 965px;
+    padding: 0px 15px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
 .masons-top-sales__inner {
   margin-top: 220px;
   text-align: center;
